@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.example.MyAccountPageTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.81 sec - in org.example.MyAccountPageTests

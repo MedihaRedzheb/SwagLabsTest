@@ -1,0 +1,4 @@
+org\example\MyAccountPageTests.class
+org\example\HomePageTests.class
+org\example\ShoppingCartMenuTests.class
+org\example\TestBase.class
