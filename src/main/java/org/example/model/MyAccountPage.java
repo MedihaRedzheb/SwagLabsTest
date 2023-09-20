@@ -12,7 +12,7 @@ import java.util.List;
 
 public class MyAccountPage extends PageObjectBase {
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]")
+    @FindBy(className = "inventory_list")
     public WebElement authenticationPanel;
     @FindBy(css = ".inventory_item")
     public List<WebElement> items;

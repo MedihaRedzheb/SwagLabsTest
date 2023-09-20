@@ -1053,27 +1053,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\src\main\resources\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_PSMG_VIEW_PARTS.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\src\main\resources\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_TYPE_USAGE_LINK.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\src\main\resources\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_UPSTREAM_MMG_VIEW_PARTS.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\src\main\resources\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_VARIANT_SPEC.csv">
           <value>
             <Attribute>
@@ -3343,27 +3322,6 @@
           </value>
         </entry>
         <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\target\classes\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_MMG_VIEW_PARTS.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\target\classes\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_PSMG_VIEW_PARTS.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\target\classes\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_TYPE_USAGE_LINK.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\DELL PF1\workspace\windchill-customization\psbom-bb-functional-tests\target\classes\test\com\bmw\psmg\sbb\erelease\business\hlk\impl\persistence\FETCH_UPSTREAM_MMG_VIEW_PARTS.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

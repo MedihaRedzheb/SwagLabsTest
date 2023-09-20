@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -31,8 +32,8 @@ public class TestBase {
         USER = PropertiesHandler.getProperty("app.user");
         PASSWORD = PropertiesHandler.getProperty("app.user.password");
 
-        driver = getDriverInstance(PropertiesHandler.getProperty("default.browser"));
-        driver.manage().timeouts().implicitlyWait(Long.parseLong(PropertiesHandler.getProperty("selenium.timeout")), TimeUnit.SECONDS);
+        driver = getDriverInstance(Objects.requireNonNull(PropertiesHandler.getProperty("default.browser")));
+        driver.manage().timeouts().implicitlyWait(Long.parseLong(Objects.requireNonNull(PropertiesHandler.getProperty("selenium.timeout"))), TimeUnit.SECONDS);
         driver.navigate().to(PropertiesHandler.getProperty("app.base.url"));
         driver.manage().window().maximize();
     }

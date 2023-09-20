@@ -11,17 +11,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends PageObjectBase {
 
-    @FindBy(xpath = "//*[@id=\"user-name\"]")
+    @FindBy(id = "user-name")
     public WebElement myUserNameButton;
 
-    @FindBy(xpath = "//*[@id=\"password\"]")
+    @FindBy(id = "password")
     public WebElement myPasswordButton;
     @FindBy(id = "login-button")
     public WebElement loginButton;
-    @FindBy(css = ".login_container")
+    @FindBy(id = "login_button_container")
     public WebElement homeIntroSection;
 
-    @FindBy(css = ".error-button")
+    @FindBy(className = "error-button")
     public WebElement errorButtonForIncorrectUser;
 
     public HomePage(WebDriver driver) {
