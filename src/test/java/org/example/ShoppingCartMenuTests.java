@@ -27,12 +27,14 @@ public class ShoppingCartMenuTests extends TestBase {
         homePage = new HomePage(driver);
     }
 
+    @BeforeMethod
     public void login() {
         homePage.setUserName(USER);
         homePage.setPassword(PASSWORD);
         homePage.clickOnLoginButton();
     }
 
+    @AfterMethod
     public void logout() {
         driver.findElement(By.id("react-burger-menu-btn")).click();
         driver.findElement(By.id("logout_sidebar_link")).click();
@@ -40,7 +42,7 @@ public class ShoppingCartMenuTests extends TestBase {
 
     @Test(testName = "Add one item to shopping cart")
     public void addOneItemToShoppingCart() {
-        login();
+//        login();
         Assert.assertTrue(shoppingCartMenu.isShoppingCartButtonVisible(), "Shopping cart menu is not visible!");
 
         shoppingCartMenu.clickOnAddToCartButton(myAccountPage.items.get(0).findElement(By.id("add-to-cart-sauce-labs-backpack")));
@@ -59,13 +61,13 @@ public class ShoppingCartMenuTests extends TestBase {
         Assert.assertEquals(expectedItem, actualItem);
 
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
-        deleteCookies();
+//        deleteCookies();
 
     }
 
     @Test(testName = "Add two item to shopping cart")
     public void addTwoItemToShoppingCart() {
-        login();
+//        login();
         shoppingCartMenu.clickOnAddToCartButton(myAccountPage.items.get(1).findElement(By.id("add-to-cart-sauce-labs-bike-light")));
 
         WebElement inventoryItemNameExpected1 = myAccountPage.items.get(1).findElement(By.className("inventory_item_name"));
@@ -96,23 +98,23 @@ public class ShoppingCartMenuTests extends TestBase {
 
         driver.findElement(By.id("remove-sauce-labs-bike-light")).click();
         driver.findElement(By.id("remove-sauce-labs-bolt-t-shirt")).click();
-        logout();
+//        logout();
     }
 
     @Test(testName = "Removing item from shopping cart")
-    public void removingItemFromShoppingCart(){
-        login();
+    public void removingItemFromShoppingCart() {
+//        login();
         shoppingCartMenu.clickOnAddToCartButton(myAccountPage.items.get(4).findElement(By.id("add-to-cart-sauce-labs-onesie")));
         shoppingCartMenu.clickOnShoppingCartButton();
         int sizeBeforeRemoving = myAccountPage.itemsInShoppingCart.size();
-        shoppingCartMenu.clickOnRemoveFromCartButton(myAccountPage.itemsInShoppingCart.get(1).findElement(By.id("remove-sauce-labs-onesie")));
-        Assert.assertEquals(myAccountPage.itemsInShoppingCart.size(), sizeBeforeRemoving -1 );
-        logout();
+        shoppingCartMenu.clickOnRemoveFromCartButton(shoppingCartMenu.removeButton);
+        Assert.assertEquals(myAccountPage.itemsInShoppingCart.size(), sizeBeforeRemoving - 1);
+//        logout();
     }
 
     @Test(testName = "Finalization of order")
     public void finalizationOfOrder() {
-        login();
+//        login();
         shoppingCartMenu.clickOnAddToCartButton(myAccountPage.items.get(1).findElement(By.id("add-to-cart-sauce-labs-bike-light")));
         WebElement inventoryItemNameExpected = myAccountPage.items.get(1).findElement(By.className("inventory_item_name"));
         WebElement inventoryItemPriceExpected = myAccountPage.items.get(1).findElement(By.className("inventory_item_price"));
@@ -139,13 +141,13 @@ public class ShoppingCartMenuTests extends TestBase {
         Assert.assertTrue(shoppingCartMenu.isFinishTheOrderButtonVisible(), "Finish order button is not visible");
         shoppingCartMenu.clickOnFinishTheOrderButton();
         Assert.assertTrue(shoppingCartMenu.isCheckoutCompleteContainerVisible(), "Failed order!");
-        deleteCookies();
+//        deleteCookies();
 
     }
 
     @Test(testName = "Incorrect filling a Name field")
     public void incorrectFillingANameFieldThrowErrorMessage() {
-        login();
+//        login();
         shoppingCartMenu.clickOnAddToCartButton(myAccountPage.items.get(2).findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt")));
         shoppingCartMenu.clickOnShoppingCartButton();
         shoppingCartMenu.clickOnCheckoutButton();
@@ -157,6 +159,6 @@ public class ShoppingCartMenuTests extends TestBase {
         shoppingCartMenu.clickOnContinueButton();
 
         Assert.assertTrue(shoppingCartMenu.isErrorButtonCheckoutVisible());
-        logout();
+//        logout();
     }
 }

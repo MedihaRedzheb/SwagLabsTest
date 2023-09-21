@@ -26,8 +26,11 @@ public class MyAccountPage extends PageObjectBase {
     @FindBy(id = "inventory_container")
     public WebElement inventoryContainer;
 
-    @FindBy(id = "inventory_item_container")
+    @FindBy(id = "inventory_details_container")
     public WebElement inventoryItemContainer;
+
+    @FindBy(className = "inventory_details_desc_container")
+    public WebElement inventoryDetailsContainer;
 
     public MyAccountPage(WebDriver driver) {
         super(driver);

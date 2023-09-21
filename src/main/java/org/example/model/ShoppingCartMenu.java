@@ -15,6 +15,9 @@ public class ShoppingCartMenu extends PageObjectBase {
     @FindBy(css = ".inventory_item_name")
     public List<WebElement> itemInShoppingCart;
 
+    @FindBy(className = "btn btn_secondary btn_small cart_button")
+    public WebElement removeButton;
+
     @FindBy(className = "shopping_cart_link")
     public WebElement shoppingCartButton;
 
