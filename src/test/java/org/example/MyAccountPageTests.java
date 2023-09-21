@@ -105,14 +105,14 @@ public class MyAccountPageTests extends TestBase {
 
         SeleniumUtils.clickElement(myAccountPage.items.get(0).findElement(By.className("inventory_item_name")), driver);
 
-//        WebElement inventoryItemNameActual = myAccountPage.inventoryItemContainer.findElement(By.tagName("div"));
-//        WebElement inventoryItemPriceActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_price"));
-//        WebElement inventoryItemDescActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_desc large_size"));
-//        String inventoryItemPictureActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_price")).getAttribute("src");
+        WebElement inventoryItemNameActual = myAccountPage.inventoryDetailsContainer.findElement(By.tagName("div"));
+        WebElement inventoryItemDescActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_desc large_size"));
+        WebElement inventoryItemPriceActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_price"));
+        String inventoryItemPictureActual = myAccountPage.inventoryDetailsContainer.findElement(By.className("inventory_details_price")).getAttribute("src");
 
-//        Item actual = new Item(inventoryItemNameActual.getText(), inventoryItemPriceActual.getText(), inventoryItemDescActual.getText(), inventoryItemPictureActual);
-//        logout();
-//        Assert.assertTrue(expected.equalsForItem(actual), "Single product view does not match with main one!");
+        Item actual = new Item(inventoryItemNameActual.getText(), inventoryItemPriceActual.getText(), inventoryItemDescActual.getText(), inventoryItemPictureActual);
+        logout();
+        Assert.assertTrue(expected.equalsForItem(actual), "Single product view does not match with main one!");
 
     }
 
